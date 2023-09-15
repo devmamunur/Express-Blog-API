@@ -20,7 +20,7 @@ tags:
   - name: User
     description: User Endpoints (admin only)
 paths:
-  "/auth/register":
+  "/auth/signup":
     post:
       description: create a new account
       tags: [Auth]
@@ -44,7 +44,7 @@ paths:
               required: [name, email, password]
       responses:
         "201":
-          description: Signup successul
+          description: Signup successful
           content:
             "application/json":
               schema:
@@ -76,7 +76,7 @@ paths:
           $ref: "#/components/responses/400"
         "500":
           "$ref": "#/components/responses/500"
-  "/auth/login":
+  "/auth/signin":
     post:
       description: Login to your account
       tags: [Auth]
